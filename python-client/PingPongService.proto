@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.dubrouskaya.grpc;
+
+
+message PingRequest {
+    string pingWord = 1;
+}
+
+message PongResponse {
+    string pongWord = 1;
+}
+
+service PingPongService {
+    rpc say(PingRequest) returns (PongResponse);
+}
+
+
+
